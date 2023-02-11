@@ -31,8 +31,8 @@
     const app = Vue.createApp(App);
 
     app.component("todo-item", {
-      props: ["todo"],
-      template: `<li>{{todo.description}}</li>`
+      props: ["key", "todo"],
+      template: `<li>{{todo.description}} - {{key}}</li>`
     });
 
     app.mount("#app");
